@@ -41,10 +41,11 @@ public class Mortar : MonoBehaviour
             if(Input.GetMouseButtonDown(0))
             {
                 GameObject projectileGo = Instantiate(Projectile);
-                projectileGo.GetComponent<ProjectTile>().Shoot(points);
+                projectileGo.GetComponent<DeformObject>().Shoot(points);
 
-                projectileGo.GetComponent<ProjectTile>().OnEnd += blastpoint => hit.transform.GetComponent<MeshDeformation>().Deformate(blastpoint, Radius);
+                //projectileGo.GetComponent<DeformObject>().OnEnd += blastpoint => hit.transform.GetComponent<MeshDeformation>().Deformate(blastpoint, Radius);
             }
+
         }
     }
 }
